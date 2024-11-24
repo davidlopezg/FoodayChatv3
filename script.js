@@ -57,9 +57,10 @@ function sendMessage() {
       }
     })
     .catch(error => {
-          console.error('Error:', error); // Registra cualquier error
-          appendMessage('bot', 'Hubo un error al procesar tu mensaje.');
-        });
+        console.error('Error:', error); // Muestra el error en la consola
+        appendMessage('bot', `Error al procesar tu mensaje: ${error.message}`);
+      });
+      
       
 }
 
