@@ -43,16 +43,24 @@ function sendMessage() {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ mensaje: message })
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Mostrar la respuesta del chat
-    appendMessage('bot', data.respuesta);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    appendMessage('bot', 'Hubo un error al procesar tu mensaje.');
-  });
+    })
+    .then(response => {
+      console.log('Raw Response:', response); // Registra la respuesta cruda
+      return response.json(); // Intenta convertir la respuesta en JSON
+    })
+    .then(data => {
+      console.log('Parsed JSON:', data); // Registra la respuesta parseada
+      if (data.respuesta) { // Asegúrate de que `respuesta` exista
+        appendMessage('bot', data.respuesta);
+      } else {
+        appendMessage('bot', 'La respuesta no tiene un campo "respuesta".');
+      }
+    })
+    .catch(error => {
+          console.error('Error:', error); // Registra cualquier error
+          appendMessage('bot', 'Hubo un error al procesar tu mensaje.');
+        });
+      
 }
 
 function appendMessage(sender, text) {
