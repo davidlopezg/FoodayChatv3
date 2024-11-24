@@ -1,0 +1,36 @@
+/* styles.css */
+
+/* Modo claro y oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Estilos para los mensajes */
+  .message {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .message.user {
+    background-color: #0d47a1;
+    color: #ffffff;
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  .message.bot {
+    background-color: #e0e0e0;
+    color: #000000;
+    margin-right: auto;
+    text-align: left;
+  }
+  

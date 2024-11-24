@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Elegante</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bulma CSS Framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <!-- Header -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="ruta/al/logo.png" alt="Logo" width="112" height="28">
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <button id="toggle-theme" class="button is-dark">
+          <span class="icon">
+            <i class="fas fa-sun"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Chat -->
+  <section class="section">
+    <div class="container">
+      <div id="chat-window" class="box" style="height: 400px; overflow-y: auto;">
+        <!-- Mensajes del chat aparecerán aquí -->
+      </div>
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input id="message-input" class="input" type="text" placeholder="Escribe tu mensaje...">
+        </div>
+        <div class="control">
+          <button id="send-button" class="button is-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
