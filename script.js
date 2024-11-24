@@ -37,7 +37,7 @@ function sendMessage() {
   messageInput.value = '';
 
   // Enviar el mensaje al webhook de Make
-  fetch('https://hook.make.com/tu-webhook', {
+  fetch('https://hook.eu1.make.com/vozg3bxm35mmv6qnz223recina7r873r', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
